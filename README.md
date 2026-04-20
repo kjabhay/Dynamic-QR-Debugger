@@ -1,18 +1,31 @@
 # 📱 Dynamic QR Scanner (Android)
 
-A lightweight Android application to **scan dynamic QR codes** and validate them against a backend service in real-time.
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Kotlin-100%25-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-MVP-orange?style=for-the-badge"/>
+</p>
+
+<p align="center">
+  <b>Scan → Send → Validate</b><br/>
+  Real-time validation of dynamic QR codes
+</p>
 
 ---
 
-## 🚀 Overview
+## 🚀 Download APK
 
-This app is designed for systems where QR codes are:
+<p align="center">
+  <a href="https://github.com/kjabhay/Dynamic-QR-Debugger/releases/download/v1/DynamicQRValidator.apk">
+    <img src="https://img.shields.io/badge/⬇️%20Download%20APK-Click%20Here-blue?style=for-the-badge&logo=android"/>
+  </a>
+</p>
 
-- ⏱️ **Time-sensitive (short-lived)**
-- 🔐 **Server-issued (secure)**
-- 📡 Used for **attendance / authentication**
+---
 
-The app scans a QR code and sends it to the backend for validation.
+## 🧠 Overview
+
+This app scans dynamic QR codes and validates them against a backend service in real-time.
 
 ---
 
@@ -20,85 +33,51 @@ The app scans a QR code and sends it to the backend for validation.
 
 - 📷 Real-time QR scanning (CameraX + ML Kit)
 - 🔐 Secure backend validation
-- ⚡ Fast response with Retrofit
-- 🧾 Displays:
-  - Scanned QR content
-  - Raw server response
-- 🏫 Editable **Class ID** (default: `LH-1`)
+- ⚡ Fast API calls
+- 🧾 Shows scanned QR and server response
+- 🏫 Editable Class ID (default: LH-1)
 
 ---
 
-## 🧠 How It Works
+## 🧭 How It Works
 
 Open App → Scan QR → Send to Backend → Get Validation Result
-
-### Request sent:
-
-```json
-{
-  "class_id": "LH-1",
-  "hash": "<scanned_qr>",
-  "timestamp": <current_time>
-}
-```
-
-### Response:
-
-```json
-{
-  "valid": true
-}
-```
 
 ---
 
 ## 📦 Tech Stack
 
-- Kotlin + Jetpack Compose
-- CameraX (camera preview)
-- Google ML Kit (QR detection)
-- Retrofit (API calls)
+- Kotlin
+- Jetpack Compose
+- CameraX
+- ML Kit
+- Retrofit
 
 ---
 
-## 📲 APK Usage
+## 📲 Usage
 
-1. Install the APK on your Android device  
-2. Open the app  
-3. Enter Class ID (or use default `LH-1`)  
-4. Tap **Scan QR**  
-5. Point camera at QR  
-6. View validation result  
+1. Install APK  
+2. Open app  
+3. Enter Class ID  
+4. Scan QR  
+5. View result  
 
 ---
 
 ## ⚠️ Notes
 
-- Internet connection required  
-- Backend must be running  
-- QR codes expire quickly (time-based validation)  
-- Delay in scanning may result in invalid response  
-
----
-
-## 🧪 Debugging
-
-If validation fails:
-
-- Check if QR is expired  
-- Ensure correct `class_id`  
-- Verify backend URL is reachable  
-- Compare scanned QR content  
+- Internet required  
+- QR expires quickly  
+- Backend must be active  
 
 ---
 
 ## 👤 Author
 
-**Jyothsna Abhay**  
+Jyothsna Abhay  
 IIT Hyderabad  
 
 ---
 
-## 💬 One-line Summary
-
-> Scan QR → send to backend → validate in real-time
+> Real-time secure QR validation
